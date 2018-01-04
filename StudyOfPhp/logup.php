@@ -55,14 +55,16 @@ $result=mysqli_query($conn,"SELECT * FROM ACC_Password WHERE account='$acc'");
 $row=mysqli_fetch_array($result);
 
 if($row['account'] !=NULL){
-    echo "用户名已经存在";
+    echo "<p style='color: red'>用户名已经存在,正在跳转。。。</p>";
+    header("refresh:1.5;url=logup.html");
     exit;
 }
 
 $sql = "INSERT INTO ACC_Password(account,password)VALUES ('$acc','$pas')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "注册成功\n";
+    echo "<p style='color: green'>注册成功,正在跳转。。。</p>";
+    header("refresh:0.5;url=login.html");
 
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error."\n";

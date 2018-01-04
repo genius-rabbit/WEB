@@ -10,6 +10,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "5258wawj";
+$IP ="39.108.124.169";
 
 $conn = new mysqli($servername,$username,$password);
 
@@ -44,10 +45,13 @@ $result=mysqli_query($conn,"SELECT * FROM ACC_Password WHERE account='$acc'");
 $row=mysqli_fetch_array($result);
 
 if($row['password']!=$pas){
-    echo "密码错误";
+    echo "<p style='color: red'>密码错误,正在跳转</p>";
+    header("refresh:0.5;url=login.html");
 }
 else{
-    echo "登录成功";
+    echo "<p style='color: green'>登录成功,正在跳转。。。</p>";
+    header("refresh:1;url=SUM/HOME.html");
+    exit;
 }
 
 $conn->close();
