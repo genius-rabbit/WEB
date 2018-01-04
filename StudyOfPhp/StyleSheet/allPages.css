@@ -1,0 +1,8 @@
+body{
+    background-image: url("../Img/background.jpg");
+    background-size: cover;
+}
+h1{
+    color: aqua;
+    text-align: center;
+}
