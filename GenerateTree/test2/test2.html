@@ -2,11 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Generate Tree</title>
+    <script src="d3.js" charset="utf-8"></script>
+    <script src="test2.js"></script>
 </head>
+<style>
+    .node {
+        cursor: pointer;
+    }
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+    .node text {
+        font: 10px sans-serif;
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 1.5px;
+    }
+
+    body {
+        overflow: hidden;
+        background-color: cornsilk;
+    }
+
+</style>
 <body>
 
-<script src="test2.js" charset="utf-8"></script>
 <div id="body"></div>
 
 </body>
